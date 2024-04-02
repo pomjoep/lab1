@@ -6,8 +6,8 @@ import java.util.*;
  * regardless of operator precedence
  * 
  * @author Rob Nash
- * @author // your name goes here
- * @date // add in the date
+ * @author Quinn Epstein
+ * @date 4/1/24
  */
 public class InFixCalc {
 
@@ -48,14 +48,28 @@ public class InFixCalc {
      * @return      an int which is the result of the infix calculation
      */
     public static int calculate(String input) {
-        /**
-         * Use a Scanner or StringTokenizer to tokenize the input string
-         * Loop through the tokens and perform the calculations
-         * Consider using variables to track the operand and numbers
-         * Use a switch statement to handle different operations.
-         */
-        int solution = 0;
-
-        return solution;
+        int second;
+        Scanner scanner = new Scanner(input);
+        int first = scanner.nextInt();
+        while(scanner.hasNext()){
+            switch (scanner.next()){
+                case "+":
+                    second = scanner.nextInt();
+                    first += second;
+                    break;
+                case "-":
+                    second = scanner.nextInt();
+                    first -= second;
+                    break;
+                case "*":
+                    second = scanner.nextInt();
+                    first *= second;
+                    break;
+                case "/":
+                    second = scanner.nextInt();
+                    first /= second;
+            }
+        }
+        return first;
     }
 }
