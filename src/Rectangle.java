@@ -1,10 +1,10 @@
 public class Rectangle {
 
 	// what should these be? public? private?
-	int x;
-	int y;
-	int x2; 
-	int y2; 
+	int x;   //class var 1
+	int y;   //class var 2
+	int x2;  //class var 3
+	int y2;  //class car 4
 
 	// default constructor
 	public Rectangle() { 
@@ -13,8 +13,8 @@ public class Rectangle {
 
 	// constructor to build a rectangle with only one coordinate pair
 	public Rectangle(int newX, int newY) {
-		x = newX;
-		y = newY;
+		x = newX; //local var 1
+		y = newY; //local var 2
 	}
 
 	// constructor used to fully initialize a Rectangle
@@ -51,7 +51,7 @@ public class Rectangle {
 		return retVal;
 	}
 
-	// we've used the built-in equals() method to compare strings. if we want to use it
+	// We've used the built-in equals() method to compare strings. if we want to use it
 	// on our own objects, we'll need to take it (inherit it) and make our own version (override it)
 	// the original 'equals' method compares memory addresses to check if objects occupy the same 
 	// address. However, we want to override this method to compare Rectangles based on their 
