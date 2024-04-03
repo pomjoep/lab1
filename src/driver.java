@@ -6,5 +6,4 @@ public class driver {
         System.out.println(pair.meows);
         System.out.println(pair.secretMeows);
     }
-
 }
